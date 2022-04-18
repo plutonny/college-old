@@ -69,7 +69,7 @@ function output(type_data, data) {
  * 0 - change theme
  * 1 - load (update) theme
  */
-function changeimage(name, directory) {document.getElementById(name).src = `/assets/${betafolder}PC/images/${directory}`;}
+function changeimage(name, directory) {document.getElementById(name).src = `/college-old/assets/images/${directory}`;}
 async function theme(setting) {
     var tf = settings('get', 'theme'); var ut = '';
     if (settings('get', 'typetheme') == 2) { if (solss.sunrise < dt && dt < solss.sunset) { tf = 'light'; settings('write', 'theme', 'light') } else { tf = 'dark'; settings('write', 'theme', 'dark') } }
@@ -114,7 +114,7 @@ function header(text, enableTheme, enableBack, enableSettings) {
     try {
         document.write(`
         <div id="header" class="header" style="padding-bottom: 12px; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; user-select: none;">
-        <a href="/college${betarepos}/PC/" class="logo_text_header">
+        <a href="/college-old/" class="logo_text_header">
             <p class="logo_text_header" style="font-size: 24px; margin-bottom: 12px; margin-left: 24px;">Группа КСК-11</p>
         </a>
         <p class="logo_dot_header" style="font-size: 20px; margin-bottom: 10px; margin-left: 14px; margin-right: 14px;">|</p>
@@ -131,8 +131,8 @@ function header(text, enableTheme, enableBack, enableSettings) {
             document.write(`<button id="theme_button" class="back_button mobile" style="border: none !important;" onclick="history.back()"><img style="width: 32px; height: 32px;" id="back_button" src=""></button>`)
         }
         if (enableSettings) {
-            document.write(`<button id="theme_button" class="settings_header_button pc" onclick="location.assign('/college${betarepos}/PC/settings/')">Настройки</button>`); 
-            document.write(`<button id="theme_button" class="settings_header_button mobile" style="border: none !important;" onclick="location.assign('/college${betarepos}/PC/settings/')"><img style="width: 32px; height: 32px;" id="mobile_settings_button" src=""></button>`)
+            document.write(`<button id="theme_button" class="settings_header_button pc" onclick="location.assign('/college-old/settings/')">Настройки</button>`); 
+            document.write(`<button id="theme_button" class="settings_header_button mobile" style="border: none !important;" onclick="location.assign('/college-old/settings/')"><img style="width: 32px; height: 32px;" id="mobile_settings_button" src=""></button>`)
         }
         document.write(`</div><hr style="border: none; height: 2px; margin-top: 0;"></div>`);
     } catch (e) { con('critical', `ERROR: header function (${e})`) }
