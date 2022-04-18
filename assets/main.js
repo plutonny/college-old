@@ -61,7 +61,6 @@ async function theme(setting) {
     if (settings('get', 'typetheme') == 2) { if (solss.sunrise < dt && dt < solss.sunset) { tf = 'light'; settings('write', 'theme', 'light') } else { tf = 'dark'; settings('write', 'theme', 'dark') } }
     try {
         if (setting === 0) {
-            await sleep(50)
             if (tf == 'light') { document.getElementById('theme_css').innerHTML = dark_theme; document.getElementById('theme-color').content = '#111111'; settings('write', 'theme', 'dark'); } 
             else if (tf == 'dark') { document.getElementById('theme_css').innerHTML = light_theme; document.getElementById('theme-color').content = '#e9e9e9'; settings('write', 'theme', 'light'); };
         } if (setting == 1) {
