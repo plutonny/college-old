@@ -1,0 +1,125 @@
+/* Including fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+/* Scrollbar disable only to Chrome users */
+::-webkit-scrollbar { width: 0px; height: 0px; }
+
+/* Emoji styles */
+.emoji { margin: -2px -18px 0px -4px; transform: scale(0.5, 0.5); z-index: 2 !important; }
+.emdouble { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/double!.png); background-repeat: no-repeat; }
+.emballoon { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/balloon.png); background-repeat: no-repeat; }
+.emscroll { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/scroll.png); background-repeat: no-repeat; }
+.emclipboard { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/clipboard.png); background-repeat: no-repeat; }
+.emcalendarpad { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/calendarpad.png); background-repeat: no-repeat; }
+
+/* General colors */
+:root { --main-text-color:#f4f4f4; --main-bg-color:#202020; }
+h1, h2, h3, h4, h5, h6, p, a, b, td, div, li, button, br, input, label, svg { z-index: 2; transition: 200ms; color: var(--main-text-color); font-family: 'Nunito'; word-wrap: break-word; }
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, b::selection, td::selection, div::selection, svg::selection, li::selection, img::selection, button::selection, br::selection, input::selection, label::selection { background-color: var(--weekcolor); }
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, a::-moz-selection, b::-moz-selection, td::-moz-selection, div::-moz-selection, svg::-moz-selection, li::-moz-selection, img::-moz-selection, button::-moz-selection, br::-moz-selection, input::-moz-selection, label::-moz-selection { background-color: var(--weekcolor); }
+html, body { background-color: var(--main-bg-color); margin: 0; overflow-x: hidden; transition: 200ms; }
+a { text-decoration: none; cursor: pointer; } .logo_text_header:hover { text-decoration: underline; }
+button { background-color: var(--main-bg-color); }
+button:active, div.support_button:active { background-color: var(--button-bg-active); }
+a:hover, a:after { color: var(--main-text-color); }
+a:active { color: var(--active-text-color); }
+hr { color: var(--main-text-color); background-color: var(--main-text-color); width: calc(100% - 28px); }
+div.support_button, button.theme_header_button, button.settings_header_button { border: 2px solid var(--main-text-color); background-color: var(--main-bg-color); }
+div.warning { margin: 24px; }
+p.warning { font-size: 18px; margin-top: 48px; }
+b.warning { font-size: 20px; font-family: 'Montserrat'; }
+
+div.modal { transition: 350ms; z-index: 99; }
+div.max_modal { transition: 350ms; display: flex; justify-content: center; z-index: 100; height: 100%; }
+div.update_modal { transition: 350ms; background-color: var(--main-bg-color); width: 386px; border: 2px solid var(--main-text-color); border-radius: 24px; }
+
+@media (min-width: 1401px) { /* Styles for PC */
+    /* General styles */
+    div.max_modal { align-items: center; }
+    .mobile, .middle { display: none !important; }
+    div.version { margin-left: 48px; margin-top: 48px; }
+    div.pc_gorisontal_void { margin-right: auto; }
+    .theme_header_button, .settings_header_button { margin-right: 26px; margin-top: 14px; border-radius: 10px; border: none; height: 32px; width: 122px; cursor: pointer; }
+
+    /* Home styles */
+    .header { height: 66px; }
+    .greetings { margin-top: 64px; margin-left: 48px; }
+    .dateweek { margin-left: 48px; }
+    .support_table { width: 100%; display: flex; margin-top: 64px; justify-content: center; flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; }
+    div.support_button { text-align: center; width: 230px; height: 64px; border-radius: 20px; padding: 30px 12px 220px 12px; }
+    p.support_button { font-size: 26px; margin: 0; } div.margin52 { margin-top: 52px; }
+
+    /* Timetable styles */
+    .timetable_flex_container { display: flex; flex-direction: row; flex-wrap: wrap; text-align: center; justify-content: space-evenly; }
+    .timetable_button { width: 360px; }
+    .timetable_greetings { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; align-items: center; }
+    p.timetable_day { margin-top: 24px; font-size: 22px; }
+    p.timetable_week { margin-top: 24px; font-size: 22px; }
+    div.timetable_alerts { margin: 0px 0px 48px 64px !important; }
+    div.timetable_day { display: flex; flex-direction: row; flex-wrap: wrap; text-align: center; justify-content: space-evenly; }
+
+    /* Other styles */
+    table.other_table { margin-left: 28px !important; margin-top: 42px !important; margin-right: 22px !important; width: 764px; }
+    div.other_page { display: flex; flex-direction: row; }
+    div.other { flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; }
+    div.other_container { flex-direction: column; flex-wrap: nowrap; align-items: center; padding-right: 32px; }
+} @media (max-width: 1400px) and (min-width: 541px) { /* Middle styles */
+    /* General styles */
+    div.max_modal { align-items: center; }
+    .mobile, .midnone { display: none !important; }
+    div.version { margin-left: 48px; margin-top: 48px; }
+    div.pc_gorisontal_void { margin-right: auto; }
+    .theme_header_button, .settings_header_button { margin-right: 26px; margin-top: 14px; border-radius: 10px; border: none; height: 32px; width: 122px; cursor: pointer; }
+
+    /* Home styles */
+    .header { height: 66px; }
+    .greetings { margin-top: 64px; margin-left: 48px; }
+    .dateweek { margin-left: 48px; }
+    .support_table { width: 100%; display: flex; margin-top: 64px; justify-content: center; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; }
+    div.support_button { text-align: center; width: 210px; height: 48px; border-radius: 20px; padding: 24px 12px 210px 12px; margin: 0px 12px 24px 12px; }
+    p.support_button { font-size: 26px; margin: 0; } div.margin52 { margin-top: 44px; }
+
+    /* Timetable styles */
+    .timetable_flex_container { display: flex; flex-direction: row; flex-wrap: wrap; text-align: center; justify-content: space-evenly; }
+    .timetable_button { width: 312px; }
+    .timetable_greetings { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; }
+    p.timetable_day { margin-top: 24px; font-size: 22px; }
+    p.timetable_week { margin-top: 24px; font-size: 22px; }
+    div.timetable_alerts { margin: 0px 0px 48px 48px !important; }
+    div.timetable_day { display: flex; flex-direction: row; flex-wrap: wrap; text-align: center; justify-content: space-evenly; }
+
+    /* Other styles */
+    table.other_table { margin-left: 22px !important; margin-top: 36px !important; margin-right: 22px !important; width: 464px; }
+    div.other_page { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    div.other { flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; }
+    div.other_container { flex-direction: column; flex-wrap: nowrap; align-items: center; padding-right: 24px; }
+} @media (max-width: 540px) { /* Styles for MOBILE */
+    /* General styles */
+    div.max_modal { align-items: flex-end; }
+    div.update_modal { margin: 22px; }
+    .pc, .middle, .logo_text_header, .logo_dot_header { display: none !important; }
+    div.version { text-align: center; margin-top: 48px; }
+    div.mobile_gorisontal_void { margin-right: auto; }
+    .back_button { transition: 200ms; position: absolute; margin-left: 14px; margin-top: 14px; border-radius: 100px; border: none; cursor: pointer; padding: 2px 3px 0px 3px; }
+    .theme_header_button, .settings_header_button { left: 100%; transition: 200ms; position: absolute; margin: 14px 0px 0px -52px; border-radius: 100px; border: none; cursor: pointer; padding: 2px 3px 0px 3px; }
+    
+    /* Home styles */
+    .header { height: 48px; }
+    h1.helper_text { font-size: 32px; text-align: center; padding-top: 32px; padding-bottom: 32px; }
+    .greetings { margin-top: 72px; margin-left: 24px; }
+    .dateweek { margin-left: 24px; }
+    .support_table { margin: 32px 24px 32px 24px; display: flex; flex-direction: column; flex-wrap: nowrap; }
+    div.support_button { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; height: 64px; border-radius: 20px; padding: 0px 0px 18px 0px; }
+    p.support_button { font-size: 26px; padding: 12px 0px 0px 12px; margin: 0; } div.margin24 { margin-top: 24px; }
+
+    /* Timetable styles */
+    p.timetable_day, p.timetable_week { margin-top: 24px; margin-left: 24px; font-size: 22px; }
+    p.timetable_weekname_head { margin-bottom: 36px !important; }
+
+    /* Other styles */
+    table.other_table { width: 80%; }
+    div.other_page { display: flex; flex-direction: column; }
+    div.other { flex-direction: column; flex-wrap: nowrap; align-items: center; }
+    div.other_container { flex-direction: column; flex-wrap: nowrap; align-items: center; }
+}
