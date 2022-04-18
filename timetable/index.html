@@ -12,8 +12,7 @@
         <script type="text/javascript"       src="https://bebrarium.plutonny.ru/solar.js"></script>
         <script type="text/javascript"       src="https://bebrarium.plutonny.ru/luxon.js"></script>
 
-        <script type="text/javascript"       src="/college-old/assets/debug.js"></script>
-        <script type="text/javascript"       src="/college-old/assets/frames.js"></script>
+        <script type="text/javascript"       src="/college-old/assets/main.js"></script>
         <link rel="icon"                    href="/college-old/assets/images/college.png">
         <link rel="stylesheet" media="all"  href="/college-old/assets/main.css">
         <style id="theme_css"></style>
@@ -42,7 +41,7 @@
         </style>
     </head>
     <body>
-        <div class="modal" id="modal"></div>
+        <div id="header"></div>
         <script>
             var ndt = new Date(), dec31 = new Date(2021, 11, 31)
             header('расписание', false, true, false);
@@ -56,7 +55,7 @@
                 try {    if (type == 'day')    { document.getElementById('timetable_special_css').innerHTML = `.timetable_button_day { background-color: var(--button-bg-enable); } .timetable_week, .timetable_alerts {display:none;}` }
                     else if (type == 'week')   { document.getElementById('timetable_special_css').innerHTML = `.timetable_button_week { background-color: var(--button-bg-enable); } .timetable_day, .timetable_alerts {display:none;}` }
                     else if (type == 'alerts') { document.getElementById('timetable_special_css').innerHTML = `.timetable_button_alerts { background-color: var(--button-bg-enable); } .timetable_week, .timetable_day {display:none;}` }
-                } catch (e) { con('error', `ERROR: logic timetable have any problem (${e})!`) } }
+                } catch (e) { console.error(`ERROR: logic timetable have any problem (${e})!`) } }
 
             /* returned day timetable */
             function get_timetable(type) {
@@ -214,8 +213,8 @@
                     `<div class="timetable_flex_dayweek"><p class="timetable_week">пятница:</p>` + timetable_list[4] + `</div>` +
                     `<div class="timetable_flex_dayweek"><p class="timetable_week">суббота:</p>` + timetable_list[5] + `</div></div>`
                 } else if (type == 'alerts') { return timetable_alerts }
-                else { con('warn', 'Warn: timetable function getting uncaught variables') }
-                } catch (e) { con(`error', 'ERROR: timetable function have problem (${e})`) }
+                else { console.warn('Warn: timetable function getting uncaught variables') }
+                } catch (e) { console.error(`ERROR: timetable function have problem (${e})`) }
             }
             output(false, `
             <div class="timetable_greetings">

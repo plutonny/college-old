@@ -7,11 +7,11 @@
 
 /* Emoji styles */
 .emoji { margin: -2px -18px 0px -4px; transform: scale(0.5, 0.5); z-index: 2 !important; }
-.emdouble { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/double!.png); background-repeat: no-repeat; }
-.emballoon { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/balloon.png); background-repeat: no-repeat; }
-.emscroll { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/scroll.png); background-repeat: no-repeat; }
-.emclipboard { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/clipboard.png); background-repeat: no-repeat; }
-.emcalendarpad { display: inline-block; height: 64px; width: 64px; background-image: url(images/emoji/calendarpad.png); background-repeat: no-repeat; }
+.emdouble { display: inline-block; height: 64px; width: 64px; background-image: url(emoji/double!.png); background-repeat: no-repeat; }
+.emballoon { display: inline-block; height: 64px; width: 64px; background-image: url(emoji/balloon.png); background-repeat: no-repeat; }
+.emscroll { display: inline-block; height: 64px; width: 64px; background-image: url(emoji/scroll.png); background-repeat: no-repeat; }
+.emclipboard { display: inline-block; height: 64px; width: 64px; background-image: url(emoji/clipboard.png); background-repeat: no-repeat; }
+.emcalendarpad { display: inline-block; height: 64px; width: 64px; background-image: url(emoji/calendarpad.png); background-repeat: no-repeat; }
 
 /* General colors */
 :root { --main-text-color:#f4f4f4; --main-bg-color:#202020; }
@@ -30,13 +30,8 @@ div.warning { margin: 24px; }
 p.warning { font-size: 18px; margin-top: 48px; }
 b.warning { font-size: 20px; font-family: 'Montserrat'; }
 
-div.modal { transition: 350ms; z-index: 99; }
-div.max_modal { transition: 350ms; display: flex; justify-content: center; z-index: 100; height: 100%; }
-div.update_modal { transition: 350ms; background-color: var(--main-bg-color); width: 386px; border: 2px solid var(--main-text-color); border-radius: 24px; }
-
 @media (min-width: 1401px) { /* Styles for PC */
     /* General styles */
-    div.max_modal { align-items: center; }
     .mobile, .middle { display: none !important; }
     div.version { margin-left: 48px; margin-top: 48px; }
     div.pc_gorisontal_void { margin-right: auto; }
@@ -66,7 +61,6 @@ div.update_modal { transition: 350ms; background-color: var(--main-bg-color); wi
     div.other_container { flex-direction: column; flex-wrap: nowrap; align-items: center; padding-right: 32px; }
 } @media (max-width: 1400px) and (min-width: 541px) { /* Middle styles */
     /* General styles */
-    div.max_modal { align-items: center; }
     .mobile, .midnone { display: none !important; }
     div.version { margin-left: 48px; margin-top: 48px; }
     div.pc_gorisontal_void { margin-right: auto; }
@@ -96,8 +90,6 @@ div.update_modal { transition: 350ms; background-color: var(--main-bg-color); wi
     div.other_container { flex-direction: column; flex-wrap: nowrap; align-items: center; padding-right: 24px; }
 } @media (max-width: 540px) { /* Styles for MOBILE */
     /* General styles */
-    div.max_modal { align-items: flex-end; }
-    div.update_modal { margin: 22px; }
     .pc, .middle, .logo_text_header, .logo_dot_header { display: none !important; }
     div.version { text-align: center; margin-top: 48px; }
     div.mobile_gorisontal_void { margin-right: auto; }

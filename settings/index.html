@@ -11,8 +11,7 @@
         <script type="text/javascript"       src="https://bebrarium.plutonny.ru/solar.js"></script>
         <script type="text/javascript"       src="https://bebrarium.plutonny.ru/luxon.js"></script>
 
-        <script type="text/javascript"       src="/college-old/assets/debug.js"></script>
-        <script type="text/javascript"       src="/college-old/assets/frames.js"></script>
+        <script type="text/javascript"       src="/college-old/assets/main.js"></script>
         <link rel="icon"                    href="/college-old/assets/images/college.png">
         <link rel="stylesheet" media="all"  href="/college-old/assets/main.css">
         <style id="theme_css"></style>
@@ -29,7 +28,7 @@
         </style>
     </head>
     <body>
-        <div class="modal" id="modal"></div>
+        <div id="header"></div>
         <script>
             header('настройки', true, true, false);
 
@@ -90,13 +89,9 @@
                             </div>`)
             
             output(false, `<div class="version">
-                            <p class="version" style="font-size: 22px">Версии:</p>
+                            <p class="version" style="font-size: 22px">Версия:</p>
                                 <p class="version">
-                                    скрипт: ${VERSION} build ${settings('get', 'FramesJSBuild')}<br>
-                                    debug: build ${settings('get', 'DebugJSBuild')}<br>
-                                    главная: build ${settings('get', 'HomeBuildPage')}<br>
-                                    расписание: build ${settings('get', 'TimetableBuildPage')}<br>
-                                    дополнительно: build ${settings('get', 'OtherBuildPage')}
+                                    скрипт: ${VERSION} build ${settings('get', 'MainJSBuild')}<br>
                                 </p>
                             </div>`)
             theme(1)
